@@ -854,7 +854,7 @@
                 
                 $('#roses_all').text(new Intl.NumberFormat().format(response.invite.roses_all));
                 $('#roses_today').text(new Intl.NumberFormat().format(response.invite.roses_today));
-                $('#invite_code').text(window.location.hostname + `/curtain/?next=register?r_code=${response.info[0].code}`);
+                $('#invite_code').text(window.location.hostname + `?next=register?r_code=${response.info[0].code}`);
 
                 if (response.status === false) return location.href = '/home';
              if(response.level && response.level.length){
@@ -862,12 +862,12 @@
                  }
                 $('.btn-box .btn:eq(0)').attr('data-clipboard-text', response.info[0].code);
                 $('.refcodehtml').html( response.info[0].code);
-                $('.btn-box .btn:eq(1)').attr('data-clipboard-text', window.location.hostname + `/curtain/?next=register?r_code=${response.info[0].code}`);
-                $('.shareBtn').attr('data-clipboard-text', window.location.hostname + `/curtain/?next=register?r_code=${response.info[0].code}`);
+                $('.btn-box .btn:eq(1)').attr('data-clipboard-text', window.location.hostname + `?next=register?r_code=${response.info[0].code}`);
+                $('.shareBtn').attr('data-clipboard-text', window.location.hostname + `?next=register?r_code=${response.info[0].code}`);
                 // var qrcode = new QRCode("qrcode");
-                // $('#qrcode').attr('title', window.location.hostname + `/curtain/?next=register?r_code=${response.info[0].code}`)
+                // $('#qrcode').attr('title', window.location.hostname + `?next=register?r_code=${response.info[0].code}`)
                 // function makeCode() {
-                //     qrcode.makeCode(window.location.hostname + `/curtain/?next=register?r_code=${response.info[0].code}`);
+                //     qrcode.makeCode(window.location.hostname + '?next=register?r_code=${response.info[0].code}`);
                 // }
 
                 // makeCode();
